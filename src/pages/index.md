@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/vangogh_test_halb.png
+title: MARIE BRELOER
+image: /img/cover.jpg
 heading: Marie Breloer
 subheading: Maskenbildnerin und mobile Friseurin
 mainpitch:
