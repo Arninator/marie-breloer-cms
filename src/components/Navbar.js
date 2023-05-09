@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
-import logo from "../img/Signatur_final_smaller.jpg";
+import logo from "../img/logo.svg";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <nav
-      className="navbar is-transparent"
+      className="navbar is-transparent is-flex-direction-column border has-background-black"
       role="navigation"
       aria-label="main-navigation"
     >
+      <div className="container">
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item" title="Logo">
+            MARIE BRELOER
+          </Link>
+        </div>
+      </div>
+
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" title="Logo">
