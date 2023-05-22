@@ -6,8 +6,13 @@ import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
+// import $ from "jquery";
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+
+  // $("html").addClass("has-navbar-fixed-bottom");
+
   return (
     <div>
       <Helmet>
@@ -47,6 +52,8 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
       </Helmet>
       <Navbar />
       <div>{children}</div>

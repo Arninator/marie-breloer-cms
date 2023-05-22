@@ -1,29 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import logo from "../img/logo.png";
+
+import { getImage } from "gatsby-plugin-image";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <nav
-      className="navbar is-transparent is-flex-direction-column border has-background-black"
+      className="navbar is-flex-direction-column is-fixed-top"
       role="navigation"
       aria-label="main-navigation"
+      style={{
+        backgroundColor: "white"
+      }}
     >
       <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            MARIE BRELOER
-          </Link>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+        <div className="navbar-brand is-color-black">
+          <Link to="/" className="navbar-item" title="Logo" style={{ fontSize: "50px", fontFamily: ""}}>
+            <img src={ logo } alt="Marie Breloer" style={{ width: "388px", height: "100%" }} />
           </Link>
           {/* Hamburger menu */}
           <button
