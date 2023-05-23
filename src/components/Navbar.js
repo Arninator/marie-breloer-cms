@@ -3,8 +3,6 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.png";
 
-import { getImage } from "gatsby-plugin-image";
-
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -14,14 +12,12 @@ const Navbar = () => {
       role="navigation"
       aria-label="main-navigation"
       style={{
-        backgroundColor: "white"
+        backgroundColor: "red",
+        width: "50%",
       }}
     >
       <div className="container">
-        <div className="navbar-brand is-color-black">
-          <Link to="/" className="navbar-item" title="Logo" style={{ fontSize: "50px", fontFamily: ""}}>
-            <img src={ logo } alt="Marie Breloer" style={{ width: "388px", height: "100%" }} />
-          </Link>
+        <div className="navbar-brand">
           {/* Hamburger menu */}
           <button
             className={`navbar-burger burger ${isActive && "is-active"}`}
