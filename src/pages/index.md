@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: MARIE BRELOER
-image: /img/marie_vangogh_3.png
+image: /img/Marie_vanGogh_5.png
 heading: Marie Breloer
 subheading: Maskenbildnerin und mobile Friseurin
 mainpitch:
