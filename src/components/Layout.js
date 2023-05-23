@@ -2,7 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import NavbarLogo from "../components/NavbarLogo";
+import Logo from "../components/Logo";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
@@ -55,9 +55,13 @@ const TemplateWrapper = ({ children }) => {
         />
 
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+        <script src="https://kit.fontawesome.com/863dd0d27a.js" crossorigin="anonymous"></script>
+
       </Helmet>
-      <NavbarLogo />
-      {/* <Navbar /> */}
+      <div className="placeholder"></div>
+      <Logo />      
+      <Navbar />
       <div>{children}</div>
       <Footer />
     </div>

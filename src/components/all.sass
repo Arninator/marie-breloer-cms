@@ -11,9 +11,12 @@ $body-color: #333
 $black: #2b2523
 $black: black
 
-.is-fixed-almost-top
+*
+  border: 0px solid red
+
+.sticky
   position: -webkit-sticky
-  position: sticky
+  position: sticky !important
   top: 0
 
 .navbar .navbar-menu
@@ -38,6 +41,10 @@ $black: black
 // Helper Classes
 .border
   border: 1px solid red
+.placeholder
+  height: 3rem
+  zIndex: 10
+  backgroundColor: transparent
 .full-width-image-container
   width: 100vw
   height: 400px

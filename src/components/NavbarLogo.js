@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
-// import github from "../img/github-icon.svg";
-import logo from "../img/logo.png";
+import Logo from "../components/Logo";
 
 const NavbarLogo = () => {
   // const [isActive, setIsActive] = useState(false);
@@ -13,16 +11,11 @@ const NavbarLogo = () => {
       aria-label="main-navigation"
       style={{
         backgroundColor: "transparent",
-        // zIndex: "100",
+        zIndex: "100",
+        paddingTop: "20rem",
       }}
     >
-      <div className="container border is-fixed-almost-top" style={{ marginTop: "10vh", backgroundColor: "inherit"}}>
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <div>Marie Breloer</div>
-          </Link>
-        </div>
-      </div>
+      <Logo />
     </nav>
   );
 };

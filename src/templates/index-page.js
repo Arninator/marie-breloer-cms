@@ -26,12 +26,20 @@ export const IndexPageTemplate = ({
   console.log($("html"));
 
   return (
-    <div>
+    <div 
+      className=""
+      style={{
+        position: "relative",
+        top: "-50vh",
+        margin: "0",
+        padding: "0",
+      }}
+    >
       <FullWidthImage 
         img={ heroImage } 
         // title={ title } 
         // subheading={ subheading } 
-        height={ "85vh" } 
+        height={ "100vh" } 
         imgPosition={ "center" }
       />
       <section className="section section--gradient">
