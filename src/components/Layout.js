@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import NavbarLogo from "../components/NavbarLogo";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
@@ -55,7 +56,8 @@ const TemplateWrapper = ({ children }) => {
 
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
       </Helmet>
-      <Navbar />
+      <NavbarLogo />
+      {/* <Navbar /> */}
       <div>{children}</div>
       <Footer />
     </div>
