@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
         img={ heroImage } 
         // title={ title } 
         // subheading={ subheading } 
-        height={ "100vh" } 
+        height={ "85vh" } 
         imgPosition={ "center" }
       />
       <section className="section section--gradient">
