@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar is-flex is-flex-direction-column is-justify-content-space-around is-align-items-flex-end border"
+      className="navbar is-flex is-flex-direction-column"
       role="navigation"
       aria-label="main-navigation"
       style={{
@@ -25,11 +25,11 @@ const Navbar = () => {
         position: "absolute",
         top: "0",
         // left: "90vw",
-        height: "100%",
+        height: document.documentElement.scrollHeight,
         minWidth: "100vw",
         maxWidth: "100vw",
         paddingRight: "4rem",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         alignItems: "flex-end",
       }}
     >
@@ -49,7 +49,8 @@ const Navbar = () => {
           position: "-webkit-sticky",
           position: "sticky",
           top: "3rem",
-          width: "20vw"
+          width: "20vw",
+          marginTop: "5rem"
         }}
         onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).addClass("has-background-white") }}
         onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).removeClass("has-background-white") }}
@@ -85,7 +86,8 @@ const Navbar = () => {
           position: "-webkit-sticky",
           position: "sticky",
           top: "3rem",
-          width: "20vw"
+          width: "20vw",
+          marginTop: "5rem"
         }}
         onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).addClass("has-background-white") }}
         onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).removeClass("has-background-white") }}
@@ -121,7 +123,8 @@ const Navbar = () => {
           position: "-webkit-sticky",
           position: "sticky",
           top: "3rem",
-          width: "20vw"
+          width: "20vw",
+          marginTop: "5rem"
         }}
         onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).addClass("has-background-white") }}
         onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).removeClass("has-background-white") }}
@@ -157,7 +160,8 @@ const Navbar = () => {
           position: "-webkit-sticky",
           position: "sticky",
           top: "3rem",
-          width: "20vw"
+          width: "20vw",
+          marginTop: "5rem"
         }}
         onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.target).addClass("has-background-white") }}
         onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.target).removeClass("has-background-white") }}
