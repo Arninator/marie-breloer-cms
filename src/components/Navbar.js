@@ -3,28 +3,34 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.png";
 
-// import FontAwesomeIcon from ".."
+import $ from "jquery";
+import { transform } from "lodash";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isAboutActive, setAboutIsActive] = useState(false);
+  const [isWorkActive, setWorkIsActive] = useState(false);
+  const [isPriceActive, setPriceIsActive] = useState(false);
+  const [isContactActive, setContactIsActive] = useState(false);
+
 
   return (
     <nav
-      className="navbar is-flex-direction-column is-align-content-end"
+      className="navbar is-flex is-flex-direction-column is-justify-content-space-around is-align-items-flex-end border"
       role="navigation"
       aria-label="main-navigation"
       style={{
         backgroundColor: "transparent",
-        zIndex: "100",
-        position: "-webkit-sticky",
-        position: "sticky",
+        // zIndex: "100",
+        position: "absolute",
         top: "0",
-        marginTop: "-28vh",
-        marginLeft: "90vw",
-        height: "50vh",
+        // left: "90vw",
+        height: "100%",
+        minWidth: "100vw",
+        maxWidth: "100vw",
+        paddingRight: "4rem",
         justifyContent: "space-around",
         alignItems: "flex-end",
-        padding: "2% 0"
       }}
     >
       <button
@@ -36,23 +42,161 @@ const Navbar = () => {
         <span />
         <span />
       </button>
-      <div className="is-flex is-flex-direction-row is-justify-content-center has-background-white" style={{ borderRadius: "0%", paddingRight: "5vw", paddingLeft: "2vw"}}>
-        <a className="is-size-1 has-text-weight-light">
-          <i class="fa-regular fa-eye has-text-black has-text-centered has-text-weight-light"></i>
-        </a>
-      </div>
-      <div className="is-flex is-flex-direction-row is-justify-content-center has-background-white" style={{ borderRadius: "0%", paddingRight: "5vw", paddingLeft: "2vw"}}>
-        <a className="is-size-1 has-text-weight-light">
-          <i class="fas fa-euro-sign has-text-black has-text-centered has-text-weight-light"></i>
-        </a>
-      </div>
-      <div className="is-flex is-flex-direction-row is-justify-content-center has-background-white" style={{ borderRadius: "0%", paddingRight: "5vw", paddingLeft: "2vw"}}>
-        <a className="is-size-1 has-text-weight-light">
-          	<i class="fas fa-phone-volume has-text-black has-text-centered has-text-weight-light"></i>
-        </a>
-      </div>
+
+      <a
+        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
+        style={{           
+          position: "-webkit-sticky",
+          position: "sticky",
+          top: "3rem",
+          width: "20vw"
+        }}
+        onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).removeClass("has-background-white") }}
+        >
+        <div
+          id="about-div"
+          className="is-size-2 has-text-black has-text-weight-light"
+          style={{
+            display: isAboutActive ? "block" : "none",
+          }}
+        >
+          About
+        </div>
+        <div 
+          className="is-size-4 has-background-white"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            aspectRatio: "1/1",
+            borderRadius: "50%",
+            padding: "1rem",
+            backgroundColor: "white"
+          }}
+        >
+          <i className="fa-regular fa-circle-user has-text-black"></i>
+        </div>
+      </a>
+      <a 
+        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
+        style={{           
+          position: "-webkit-sticky",
+          position: "sticky",
+          top: "3rem",
+          width: "20vw"
+        }}
+        onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).removeClass("has-background-white") }}
+        >
+        <div
+          id="about-div"
+          className="is-size-2 has-text-black has-text-weight-light"
+          style={{
+            display: isWorkActive ? "block" : "none",
+          }}
+        >
+          Work
+        </div>
+          <div 
+            className="is-size-4 has-background-white"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              aspectRatio: "1/1",
+              borderRadius: "50%",
+              padding: "1rem",
+              backgroundColor: "white"
+            }}
+          >
+            <i className="fa-solid fa-brush has-text-black"></i>
+        </div>
+      </a>
+      <a 
+        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
+        style={{           
+          position: "-webkit-sticky",
+          position: "sticky",
+          top: "3rem",
+          width: "20vw"
+        }}
+        onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).removeClass("has-background-white") }}
+        >
+        <div
+          id="about-div"
+          className="is-size-2 has-text-black has-text-weight-light"
+          style={{
+            display: isPriceActive ? "block" : "none",
+          }}
+        >
+          Prices
+        </div>
+          <div 
+            className="is-size-4 has-background-white"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              aspectRatio: "1/1",
+              borderRadius: "50%",
+              padding: "1rem",
+              backgroundColor: "white"
+            }}
+          >
+            <i className="fa-solid fa-coins has-text-black"></i>
+          </div>
+      </a>
+      <a 
+        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
+        style={{           
+          position: "-webkit-sticky",
+          position: "sticky",
+          top: "3rem",
+          width: "20vw"
+        }}
+        onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.target).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.target).removeClass("has-background-white") }}
+        >
+        <div
+          id="about-div"
+          className="is-size-2 has-text-black has-text-weight-light"
+          style={{
+            display: isContactActive ? "block" : "none",
+          }}
+        >
+          Contact
+        </div>
+          <div
+            className="is-size-4 has-background-white"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              aspectRatio: "1/1",
+              borderRadius: "50%",
+              padding: "1rem",
+              backgroundColor: "white"
+            }}
+          >
+            <i className="fa-solid fa-phone has-text-black"></i>
+          </div>
+      </a>
     </nav>
   );
 };
+
+function onHover(event) {
+  $(event.target).css("transform", "scale(1.5)")
+}
+
+function onHoverOut(event) {
+  $(event.target).css("transform", "scale(1)")
+}
 
 export default Navbar;

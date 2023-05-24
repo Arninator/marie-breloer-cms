@@ -23,14 +23,14 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
 
   // $("html").addClass("has-navbar-fixed-top");
-  console.log($("html"));
+  // console.log($("html"));
 
   return (
     <div 
       className=""
       style={{
         position: "relative",
-        top: "-50vh",
+        top: "",
         margin: "0",
         padding: "0",
       }}

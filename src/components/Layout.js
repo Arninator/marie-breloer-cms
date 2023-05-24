@@ -59,9 +59,21 @@ const TemplateWrapper = ({ children }) => {
         <script src="https://kit.fontawesome.com/863dd0d27a.js" crossorigin="anonymous"></script>
 
       </Helmet>
-      <div className="placeholder"></div>
-      <Logo />      
-      <Navbar />
+      {/* <div className="placeholder border"></div> */}
+      <div className="upper-layer border">
+        <div className="placeholder"></div>
+        <div 
+          className=""
+          style={{
+            zIndex: "100",
+            position: "-webkit-sticky",
+            position: "sticky",
+            top: "0",
+          }}>
+            <Logo />
+        </div>
+        <Navbar />
+      </div>
       <div>{children}</div>
       <Footer />
     </div>

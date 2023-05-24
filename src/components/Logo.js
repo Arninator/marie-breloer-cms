@@ -5,21 +5,24 @@ const Logo = () => {
   // const [isActive, setIsActive] = useState(false);
 
   return (
-    <div 
-      className=""
+    <nav
+      className="navbar"
+      role="navigation"
+      aria-label="main-navigation"
       style={{
-        zIndex: "100",
-        position: "-webkit-sticky",
-        position: "sticky",
+        // zIndex: "100",
+        position: "absolute",
         top: "0",
-        width: "33%"
-      }}>
-      <div className="navbar-brand">
+        width: "40%"
+        // height: "100vh"
+      }}
+    >
+      <div className="navbar-brand has-background-white">
         <Link to="/" className="navbar-item" title="Logo">
-          <div className="has-text-white ml-6" style={{ fontSize: "10rem", fontWeight: "900", textShadow: "2px 2px 2px black"}}>Marie Breloer</div>
+          <div className="has-text-black mx-6" style={{ fontSize: "7rem", fontWeight: "300"}}>Marie Breloer</div>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
 
