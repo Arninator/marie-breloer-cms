@@ -13,13 +13,13 @@ const Logo = () => {
         // zIndex: "100",
         position: "absolute",
         top: "0",
-        width: "40%"
-        // height: "100vh"
+        width: "40%",
+        // height: document.documentElement.offsetHeight,
       }}
     >
       <div className="navbar-brand has-background-white">
         <Link to="/" className="navbar-item" title="Logo">
-          <div className="has-text-black mx-6" style={{ fontSize: "7rem", fontWeight: "300"}}>Marie Breloer</div>
+          <div className="has-text-black mx-6" style={{ fontSize: "5rem", fontWeight: "300"}}>Marie Breloer</div>
         </Link>
       </div>
     </nav>
