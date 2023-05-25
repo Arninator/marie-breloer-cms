@@ -8,7 +8,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
-import $ from "jquery";
+// import $ from "jquery";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -42,6 +42,16 @@ export const IndexPageTemplate = ({
         height={ "100vh" } 
         imgPosition={ "center" }
       />
+      <div
+        style={{
+          height: "100vh",
+          width: "33%",
+          backgroundColor: "white",
+          position: "absolute",
+          top: "0",
+        }}
+      >
+      </div>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
