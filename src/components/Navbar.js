@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.png";
+// import github from "../img/github-icon.svg";
+// import logo from "../img/logo.png";
 
 import $ from "jquery";
-import { transform } from "lodash";
+// import { transform } from "lodash";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar is-flex is-flex-direction-column"
+      className="navbar is-flex is-flex-direction-column is-justify-content-flex-start"
       role="navigation"
       aria-label="main-navigation"
       style={{
@@ -25,11 +25,9 @@ const Navbar = () => {
         position: "absolute",
         top: "0",
         // left: "90vw",
-        height: typeof document != undefined ? document.documentElement.scrollHeight : "100%",
+        height: typeof document === 'undefined' ? "100%" : (document.documentElement.scrollHeight),
         minWidth: "100vw",
         maxWidth: "100vw",
-        paddingRight: "4rem",
-        justifyContent: "flex-start",
         alignItems: "flex-end",
       }}
     >
@@ -44,25 +42,18 @@ const Navbar = () => {
       </button>
 
       <a
-        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
-        style={{           
-          position: "-webkit-sticky",
-          position: "sticky",
-          top: "3rem",
-          width: "20vw",
-          marginTop: "5rem",
-        }}
+        className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).addClass("has-background-white") }}
         onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).removeClass("has-background-white") }}
       >
         <div
           id="about-div"
-          className="is-size-2 has-text-black has-text-weight-light"
+          className="is-size-4 has-text-black has-text-weight-light"
           style={{
             display: isAboutActive ? "block" : "none",
           }}
         >
-          About
+          about
         </div>
         <div 
           className="is-size-4 has-background-white"
@@ -83,25 +74,18 @@ const Navbar = () => {
         </div>
       </a>
       <a 
-        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
-        style={{           
-          position: "-webkit-sticky",
-          position: "sticky",
-          top: "3rem",
-          width: "20vw",
-          marginTop: "5rem"
-        }}
+        className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).addClass("has-background-white") }}
         onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).removeClass("has-background-white") }}
       >
         <div
           id="about-div"
-          className="is-size-2 has-text-black has-text-weight-light"
+          className="is-size-4 has-text-black has-text-weight-light"
           style={{
             display: isWorkActive ? "block" : "none",
           }}
         >
-          Work
+          work
         </div>
           <div 
             className="is-size-4 has-background-white"
@@ -120,25 +104,18 @@ const Navbar = () => {
         </div>
       </a>
       <a 
-        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
-        style={{           
-          position: "-webkit-sticky",
-          position: "sticky",
-          top: "3rem",
-          width: "20vw",
-          marginTop: "5rem"
-        }}
+        className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).addClass("has-background-white") }}
         onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).removeClass("has-background-white") }}
       >
         <div
           id="about-div"
-          className="is-size-2 has-text-black has-text-weight-light"
+          className="is-size-4 has-text-black has-text-weight-light"
           style={{
             display: isPriceActive ? "block" : "none",
           }}
         >
-          Prices
+          prices
         </div>
           <div 
             className="is-size-4 has-background-white"
@@ -157,25 +134,18 @@ const Navbar = () => {
           </div>
       </a>
       <a 
-        className="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
-        style={{           
-          position: "-webkit-sticky",
-          position: "sticky",
-          top: "3rem",
-          width: "20vw",
-          marginTop: "5rem"
-        }}
+        className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).addClass("has-background-white") }}
         onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).removeClass("has-background-white") }}
       >
         <div
           id="about-div"
-          className="is-size-2 has-text-black has-text-weight-light"
+          className="is-size-4 has-text-black has-text-weight-light"
           style={{
             display: isContactActive ? "block" : "none",
           }}
         >
-          Contact
+          contact
         </div>
           <div
             className="is-size-4 has-background-white"
@@ -196,13 +166,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
-// function onHover(event) {
-//   $(event.target).css("transform", "scale(1.5)")
-// }
-
-// function onHoverOut(event) {
-//   $(event.target).css("transform", "scale(1)")
-// }
 
 export default Navbar;
