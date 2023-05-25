@@ -25,7 +25,7 @@ const Navbar = () => {
         position: "absolute",
         top: "0",
         // left: "90vw",
-        height: document != "undefined" ? document.documentElement.scrollHeight : "100%",
+        height: document != undefined ? document.documentElement.scrollHeight : "100%",
         minWidth: "100vw",
         maxWidth: "100vw",
         paddingRight: "4rem",
@@ -50,11 +50,11 @@ const Navbar = () => {
           position: "sticky",
           top: "3rem",
           width: "20vw",
-          marginTop: "5rem"
+          marginTop: "5rem",
         }}
-        onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).addClass("has-background-white") }}
-        onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.target).removeClass("has-background-white") }}
-        >
+        onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).removeClass("has-background-white") }}
+      >
         <div
           id="about-div"
           className="is-size-2 has-text-black has-text-weight-light"
@@ -77,7 +77,9 @@ const Navbar = () => {
             backgroundColor: "white"
           }}
         >
-          <i className="fa-regular fa-circle-user has-text-black"></i>
+          <i 
+            className="fa-regular fa-circle-user has-text-black"
+          ></i>
         </div>
       </a>
       <a 
@@ -89,9 +91,9 @@ const Navbar = () => {
           width: "20vw",
           marginTop: "5rem"
         }}
-        onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).addClass("has-background-white") }}
-        onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.target).removeClass("has-background-white") }}
-        >
+        onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).removeClass("has-background-white") }}
+      >
         <div
           id="about-div"
           className="is-size-2 has-text-black has-text-weight-light"
@@ -126,9 +128,9 @@ const Navbar = () => {
           width: "20vw",
           marginTop: "5rem"
         }}
-        onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).addClass("has-background-white") }}
-        onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.target).removeClass("has-background-white") }}
-        >
+        onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).removeClass("has-background-white") }}
+      >
         <div
           id="about-div"
           className="is-size-2 has-text-black has-text-weight-light"
@@ -163,9 +165,9 @@ const Navbar = () => {
           width: "20vw",
           marginTop: "5rem"
         }}
-        onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.target).addClass("has-background-white") }}
-        onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.target).removeClass("has-background-white") }}
-        >
+        onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).addClass("has-background-white") }}
+        onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).removeClass("has-background-white") }}
+      >
         <div
           id="about-div"
           className="is-size-2 has-text-black has-text-weight-light"
@@ -195,12 +197,12 @@ const Navbar = () => {
   );
 };
 
-function onHover(event) {
-  $(event.target).css("transform", "scale(1.5)")
-}
+// function onHover(event) {
+//   $(event.target).css("transform", "scale(1.5)")
+// }
 
-function onHoverOut(event) {
-  $(event.target).css("transform", "scale(1)")
-}
+// function onHoverOut(event) {
+//   $(event.target).css("transform", "scale(1)")
+// }
 
 export default Navbar;
