@@ -14,7 +14,7 @@ const Logo = () => {
         position: "absolute",
         top: "0",
         width: "40%",
-        height: typeof document != undefined ? document.documentElement.scrollHeight : "100%",
+        height: typeof document != "undefined" ? document.documentElement.scrollHeight : "100%",
       }}
     >
       <div className="navbar-brand has-background-white">
