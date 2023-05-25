@@ -43,6 +43,7 @@ export const IndexPageTemplate = ({
         imgPosition={ "center" }
       />
       <div
+        className="is-flex is-flex-direction-column is-justify-content-space-around"
         style={{
           height: "100vh",
           width: "33%",
@@ -51,6 +52,9 @@ export const IndexPageTemplate = ({
           top: "0",
         }}
       >
+        {/* <figure className="image is-8x8">
+          <img src="..\img\Marie_vanGogh_9.png" className="is-rounded"></img>
+        </figure> */}
       </div>
       <section className="section section--gradient">
         <div className="container">
