@@ -55,12 +55,11 @@ const TemplateWrapper = ({ children }) => {
         />
 
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
         <script src="https://kit.fontawesome.com/863dd0d27a.js" crossorigin="anonymous"></script>
 
       </Helmet>
       {/* <div className="placeholder border"></div> */}
-      <div className="upper-layer border">
+      <div className="upper-layer border" style={{ height: typeof document === 'undefined' ? "100%" : document.documentElement.offsetHeight }}>
         <div className="placeholder"></div>
         <div 
           className=""
