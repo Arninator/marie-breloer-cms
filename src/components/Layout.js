@@ -59,7 +59,7 @@ const TemplateWrapper = ({ children }) => {
 
       </Helmet>
       {/* <div className="placeholder border"></div> */}
-      <div className="upper-layer border" style={{ height: typeof document === 'undefined' ? "100%" : document.documentElement.offsetHeight }}>
+      <div className="upper-layer border" style={{ height: "100%"}}>
         <div className="placeholder"></div>
         <div 
           className=""

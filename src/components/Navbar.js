@@ -25,7 +25,7 @@ const Navbar = () => {
         position: "absolute",
         top: "0",
         // left: "90vw",
-        height: typeof document === 'undefined' ? "100%" : (document.documentElement.scrollHeight),
+        height: "100%",
         minWidth: "100vw",
         maxWidth: "100vw",
         alignItems: "flex-end",

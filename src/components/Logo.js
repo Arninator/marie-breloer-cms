@@ -16,7 +16,7 @@ const Logo = () => {
         position: "absolute",
         top: "0",
         width: "40%",
-        height: typeof document === 'undefined' ? "100%" : document.documentElement.scrollHeight,
+        height: "100%",
       }}
     >
       <div className="navbar-brand is-flex is-flex-direction-column is-justify-content-flex-start">
