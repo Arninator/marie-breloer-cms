@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import { useState } from 'react';
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -24,6 +25,13 @@ export const IndexPageTemplate = ({
 
   // $("html").addClass("has-navbar-fixed-top");
   // console.log($("html"));
+
+  const [srcPath1, setSrcPath1] = useState("../img/Marie_vanGogh_9.png");
+  const [srcPath2, setSrcPath2] = useState("../img/Marie_vanGogh_4.png");
+  const [srcPath3, setSrcPath3] = useState("../img/Marie_vanGogh_6.png");
+  const [srcPath4, setSrcPath4] = useState("../img/Marie_vanGogh_7.png");
+  const [srcPath5, setSrcPath5] = useState("../img/Marie_vanGogh_1.png");
+  const [srcPath8, setSrcPath8] = useState("../img/Marie_vanGogh_8.png");
 
   return (
     <div 
@@ -60,17 +68,87 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div className="column">
                 <div className="content">
                   <div className="content">
-                    <div className="tile">
+                    <div className="content">
+                      <div className="columns">
+                        <div className="column is-4">
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath1(srcPath1.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath1(srcPath1.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath1 } 
+                              className=""
+                            ></img>
+                          </figure>
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath4(srcPath4.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath4(srcPath4.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath4 } 
+                              className=""
+                            ></img>
+                          </figure>
+                        </div>
+                        <div className="column is-4">
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath2(srcPath2.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath2(srcPath2.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath2 } 
+                              className=""
+                            ></img>
+                          </figure>
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath5(srcPath5.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath5(srcPath5.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath5 } 
+                              className=""
+                            ></img>
+                          </figure>
+                        </div>
+                        <div className="column is-4">
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath3(srcPath3.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath3(srcPath3.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath3 } 
+                              className=""
+                            ></img>
+                          </figure>
+                          <figure 
+                            className="image"
+                            onMouseOver={ () => setSrcPath8(srcPath8.replace(".png", "-hover.png")) }
+                            onMouseOut={ () => setSrcPath8(srcPath8.replace("-hover", "")) }
+                          >
+                            <img 
+                              src={ srcPath8 } 
+                              className=""
+                            ></img>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="tile">
                       <h1 className="title">{ mainpitch.title }</h1>
                     </div>
                     <div className="tile">
                       <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
+                    </div> */}
                   </div>
-                  <div className="columns">
+                  {/* <div className="columns">
                     <div className="column is-12">
                       <h3 className="has-text-weight-semibold is-size-2">
                         {heading}
@@ -96,7 +174,7 @@ export const IndexPageTemplate = ({
                         Read more
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
