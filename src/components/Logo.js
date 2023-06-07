@@ -18,7 +18,7 @@ const Logo = () => {
       }}
     >
       <div className="navbar-brand is-flex is-flex-direction-column is-justify-content-flex-start">
-        <Link to="/" className="navbar-item" title="Logo">
+        <Link to="/" className="navbar-item has-background-white" title="Logo">
           <div className="has-text-black mx-6" style={{ fontSize: "5rem", fontWeight: "100"}}>marie breloer</div>
         </Link>
       </div>
