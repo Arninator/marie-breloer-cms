@@ -73,7 +73,8 @@ const Navbar = () => {
           ></i>
         </div>
       </a>
-      <a 
+      <Link
+        to="/work"
         className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).addClass("has-background-white") }}
         onMouseOut={ (e) => {setWorkIsActive(!isWorkActive); $(e.currentTarget).removeClass("has-background-white") }}
@@ -102,7 +103,7 @@ const Navbar = () => {
           >
             <i className="fa-solid fa-brush has-text-black"></i>
         </div>
-      </a>
+      </Link>
       <a 
         className="sticky-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
         onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).addClass("has-background-white") }}
