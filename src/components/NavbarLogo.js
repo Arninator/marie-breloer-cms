@@ -10,12 +10,18 @@ const NavbarLogo = () => {
       role="navigation"
       aria-label="main-navigation"
       style={{
-        backgroundColor: "transparent",
         zIndex: "100",
-        paddingTop: "20rem",
+        position: "-webkit-sticky",
+        position: "sticky",
+        top: "0",
+        width: "33%"
       }}
     >
-      <Logo />
+      <div className="navbar-brand has-background-black">
+        <Link to="/" className="navbar-item" title="Logo">
+          <div className="has-text-white ml-6" style={{ fontSize: "10rem", fontWeight: "900", textShadow: "2px 2px 2px red" }}>Marie Breloer</div>
+        </Link>
+      </div>
     </nav>
   );
 };
