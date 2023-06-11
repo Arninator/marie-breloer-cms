@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children }) => {
         $("#brand-div").css("font-size", "3rem").css("border", "1px solid black")
       } else {
         $(".navbar-object").css("margin-top", window.scrollY > 100  ? (8 / ( window.scrollY / window.outerHeight )) : "8rem")
-        console.log("marginTop: " + window.scrollY + " / " + window.outerHeight + " = " + ( window.scrollY / window.outerHeight ))
+        // console.log("marginTop: " + window.scrollY + " / " + window.outerHeight + " = " + ( window.scrollY / window.outerHeight ))
         $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
         $("#burger-button").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
         $("#brand-div").css("font-size", "5rem").css("border", "none")
