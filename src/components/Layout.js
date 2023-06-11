@@ -13,7 +13,7 @@ import $ from "jquery";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
-  document.onscroll = () => {
+  document !== undefined ? document.onscroll = () => {
     // console.log(window.scrollY)
     if (typeof window !== undefined) {
       if(window.scrollY > (window.outerHeight / 2.)) {
@@ -31,7 +31,7 @@ const TemplateWrapper = ({ children }) => {
         $("#brand-div").css("font-size", "5rem").css("border", "none")
       }
     }
-  }
+  } : ""
 
   return (
     <div>
