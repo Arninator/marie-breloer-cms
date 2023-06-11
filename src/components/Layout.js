@@ -13,7 +13,7 @@ import $ from "jquery";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
-  if (typeof document !== undefined) {
+  if (typeof document !== "undefined") {
     document.onscroll = () => {
       // console.log(window.scrollY)
       if (typeof window !== undefined) {
