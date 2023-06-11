@@ -89,11 +89,7 @@ export default function WorkRoll() {
                   slug
                 }
                 frontmatter {
-                  title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
+                  image {
                     childImageSharp {
                       gatsbyImageData(
                         width: 120
@@ -103,6 +99,17 @@ export default function WorkRoll() {
 
                     }
                   }
+                  hover-image {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 120
+                        quality: 100
+                        layout: CONSTRAINED
+                      )
+
+                    }
+                  }
+                  alt
                 }
               }
             }
