@@ -13,6 +13,12 @@ const Navbar = () => {
   const [isPriceActive, setPriceIsActive] = useState(false);
   const [isContactActive, setContactIsActive] = useState(false);
 
+  function onClick() {
+
+    setIsActive(!isActive);
+    isActive ? $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center") : $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center");
+  }
+
   return (
     <nav
       className="navbar sticky-item is-flex is-flex-direction-row is-justify-content-space-between full-width-container"
@@ -24,21 +30,21 @@ const Navbar = () => {
       }}
     >
       <div className="navbar-brand navbar-object">
-        <Link to="/" className="navbar-item has-background-white" title="Logo">
+        <Link to="/" className="navbar-item" title="Logo">
           <div 
             id="brand-div" 
             className="has-text-black mx-6" 
             style={{ 
-              fontWeight: "100"
+              fontWeight: "100",
+              fontSize: "5rem",
             }}
           >
-            { () => $("#brand-div").css("font-size", "5rem") }
             marie&nbsp;breloer
           </div>
         </Link>
       </div>
       
-      <div className="is-flex is-flex-direction-column is-justify-content-flex-start border-cyan">
+      <div className="is-flex is-flex-direction-column is-justify-content-flex-start">
         {/* <button
           className={`navbar-burger burger ${isActive && "is-active"}`}
           aria-expanded={isActive}
@@ -54,7 +60,7 @@ const Navbar = () => {
           style={{
             display: "none"
           }}
-          onClick={ () => $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")}
+          onClick={ onClick }
         >
           <div 
             className="is-size-4 has-background-white"
@@ -64,6 +70,7 @@ const Navbar = () => {
               justifyContent: "center",
               alignItems: "center",
               aspectRatio: "1/1",
+              border: "1px solid black",
               borderRadius: "50%",
               padding: "1rem",
               backgroundColor: "white"
