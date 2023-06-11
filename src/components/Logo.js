@@ -5,24 +5,32 @@ const Logo = () => {
   // const [isActive, setIsActive] = useState(false);
 
   return (
-    <nav
-      className="navbar"
-      role="navigation"
-      aria-label="main-navigation"
+    <div
+      id="logo"
+      className=""
+      // role="navigation"
+      // aria-label="main-navigation"
       style={{
-        // zIndex: "100",
+        backgroundColor: "transparent",
+        zIndex: "100",
         position: "absolute",
         top: "0",
-        width: "40%",
-        height: typeof document === 'undefined' ? "100%" : document.documentElement.scrollHeight,
+        // width: "100vw",
+        height: typeof document === 'undefined' ? "100%" : document.activeElement.scrollHeight,
       }}
     >
-      <div className="navbar-brand is-flex is-flex-direction-column is-justify-content-flex-start">
-        <Link to="/" className="navbar-item has-background-white" title="Logo">
-          <div className="has-text-black mx-6" style={{ fontSize: "5rem", fontWeight: "100"}}>marie breloer</div>
+      <div className="placeholder"></div>
+      <div 
+        className="sticky-item has-background-white is-flex is-flex-direction-row is-justify-content-flex-start"
+        style={{
+          width: "fit-content"
+        }}
+      >
+        <Link to="/" className="" title="Logo">
+          <div className="has-text-black mx-6" style={{ fontSize: "5rem", fontWeight: "100"}}>marie&nbsp;breloer</div>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 

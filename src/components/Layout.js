@@ -2,17 +2,35 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Logo from "../components/Logo";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import { useState, useEffect } from "react";
 
-// import $ from "jquery";
+
+import $ from "jquery";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
-  // $("html").addClass("has-navbar-fixed-bottom");
+  document.onscroll = () => {
+    console.log(window.scrollY)
+    if (typeof window !== undefined) {
+      if(window.scrollY > (window.outerHeight / 2.)) {
+        // $(".menu-list-item").css("margin-top", -1 * ($(".menu-list-item").height + $(".menu-list-item").css("margin-top")))
+        $(".menu-list-item").addClass("move-icon")
+        // $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
+        $("#burger-button").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
+        $("#brand-div").css("font-size", "3rem")
+      } else {
+        $(".navbar-object").css("margin-top", window.scrollY != 0 ? (8 / ( window.scrollY / window.outerHeight )) : "8rem")
+        console.log("marginTop: " + window.scrollY + " / " + window.outerHeight + " = " + ( window.scrollY / window.outerHeight ))
+        $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
+        $("#burger-button").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
+        $("#brand-div").css("font-size", "5rem")
+      }
+    }
+  }
 
   return (
     <div>
@@ -58,21 +76,7 @@ const TemplateWrapper = ({ children }) => {
         <script src="https://kit.fontawesome.com/863dd0d27a.js" crossorigin="anonymous"></script>
 
       </Helmet>
-      {/* <div className="placeholder border"></div> */}
-      <div className="upper-layer border" style={{ height: typeof document === 'undefined' ? "100%" : document.documentElement.offsetHeight }}>
-        <div className="placeholder"></div>
-        <div 
-          className=""
-          style={{
-            zIndex: "100",
-            position: "-webkit-sticky",
-            position: "sticky",
-            top: "0",
-          }}>
-            <Logo />
-        </div>
-        <Navbar />
-      </div>
+      <Navbar />
       <div>{children}</div>
       <Footer />
     </div>

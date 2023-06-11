@@ -9,7 +9,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
-// import $ from "jquery";
+import $ from "jquery";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
       className=""
       style={{
         position: "relative",
-        top: "",
+        top: "-" + $("nav").css("height"),
         margin: "0",
         padding: "0",
       }}
@@ -47,8 +47,8 @@ export const IndexPageTemplate = ({
         img={ heroImage } 
         // title={ title } 
         // subheading={ subheading } 
-        height={ "100vh" } 
-        imgPosition={ "center" }
+        height={ typeof window === 'undefined' ? "100%" : window.innerHeight }
+        imgPosition="center"
       />
       <div
         className="is-flex is-flex-direction-column is-justify-content-space-around"
@@ -82,6 +82,7 @@ export const IndexPageTemplate = ({
                             <img 
                               src={ srcPath1 } 
                               className=""
+                              alt=""
                             ></img>
                           </figure>
                           <figure 

@@ -3,7 +3,27 @@ import * as React from "react";
 import Layout from "../../components/Layout";
 import WorkRoll from "../../components/WorkRoll";
 
+import $ from "jquery";
+
 export default class WorkIndexPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    // this.state = {
+    //   active: false,
+    //   navBarActiveClass: "",
+    // };
+    // this.toggleHamburger = this.toggleHamburger.bind(this);
+
+    
+  }
+
+  // componentDidMount() {
+
+  //   console.log("height: " +  document.documentElement.scrollHeight + " window: " + window.outerHeight)
+  //   // $("#logo").css("margin-top", "10vh");
+  // }
+
   render() {
     return (
       <Layout>
@@ -13,8 +33,8 @@ export default class WorkIndexPage extends React.Component {
           style={{
             backgroundImage: `url('../img/Theater11 190.png')`,
             backgroundPosition: "25% 45%",
-            height: "75vh",
-
+            height: "78vh",
+            top: "-" + $("nav").css("height"),
           }}
         >
           {/* <h1
