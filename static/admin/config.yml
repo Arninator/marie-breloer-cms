@@ -32,11 +32,14 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+# ---
+# WORK
+# ---
   - name: "work"
     label: "Work"
     folder: "src/pages/work"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -44,9 +47,17 @@ collections:
           widget: "hidden",
           default: "work-page",
         }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Hover-Image", name: "hover-image", widget: "image" }
+      # - { label: "Title", name: "title", widget: "string" }
+      # - { label: "Publish Date", name: "date", widget: "datetime" }
+      # - { label: "Description", name: "description", widget: "text" }
+      # - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+
+      - { label: "Image", name: "featuredimage", widget: image }
+      - { label: "Hover-Image", name: "hoveredimage", widget: image }
       - { label: "Alternativtext", name: "alt", widget: "string" }
+
+      # - { label: "Body", name: "body", widget: "markdown" }
+      # - { label: "Tags", name: "tags", widget: "list" }
   - name: "pages"
     label: "Pages"
     files:
