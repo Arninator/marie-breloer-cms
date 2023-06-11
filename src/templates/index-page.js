@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
       className=""
       style={{
         position: "relative",
-        top: "-" + $("nav").css("height"),
+        top: "-15vh",
         margin: "0",
         padding: "0",
       }}
