@@ -14,20 +14,21 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   document.onscroll = () => {
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
     if (typeof window !== undefined) {
       if(window.scrollY > (window.outerHeight / 2.)) {
         // $(".menu-list-item").css("margin-top", -1 * ($(".menu-list-item").height + $(".menu-list-item").css("margin-top")))
         $(".menu-list-item").addClass("move-icon")
-        // $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
+        // $(".menu-list-item").css("transition", "none")
+        $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center move-icon")
         $("#burger-button").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
-        $("#brand-div").css("font-size", "3rem")
+        $("#brand-div").css("font-size", "3rem").css("border", "1px solid black")
       } else {
-        $(".navbar-object").css("margin-top", window.scrollY != 0 ? (8 / ( window.scrollY / window.outerHeight )) : "8rem")
+        $(".navbar-object").css("margin-top", window.scrollY > 100  ? (8 / ( window.scrollY / window.outerHeight )) : "8rem")
         console.log("marginTop: " + window.scrollY + " / " + window.outerHeight + " = " + ( window.scrollY / window.outerHeight ))
         $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
         $("#burger-button").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center")
-        $("#brand-div").css("font-size", "5rem")
+        $("#brand-div").css("font-size", "5rem").css("border", "none")
       }
     }
   }
