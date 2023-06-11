@@ -32,7 +32,21 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-
+  - name: "work"
+    label: "Work"
+    folder: "src/pages/work"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "work-page",
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Hover-Image", name: "hover-image", widget: "image" }
+      - { label: "Alternativtext", name: "alt", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
