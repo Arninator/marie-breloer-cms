@@ -34,7 +34,7 @@ export default class WorkIndexPage extends React.Component {
             backgroundImage: `url('../img/Theater11 190.png')`,
             backgroundPosition: "25% 45%",
             height: "78vh",
-            top: "-" + $("nav").css("height"),
+            top: "-15vh",
           }}
         >
           {/* <h1
