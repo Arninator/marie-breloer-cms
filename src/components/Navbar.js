@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-item" title="Logo">
           <div 
             id="brand-div" 
-            className="has-text-black mx-6" 
+            className="has-text-black has-background-white mx-6" 
             style={{ 
               fontWeight: "100",
               fontSize: "5rem",
