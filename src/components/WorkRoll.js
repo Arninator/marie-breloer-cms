@@ -10,8 +10,8 @@ const WorkRollTemplate = (props) => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div className="columns is-multiline">
-      <div id="column-1" className="column is-offset-3">
+    <div className="columns is-multiline is-0">
+      <div id="column-1" className="column">
         {posts &&
           posts.map(({ node: post }, index) => {
             console.log(index % 3)
