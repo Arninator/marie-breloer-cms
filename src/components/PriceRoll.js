@@ -79,7 +79,7 @@ export default function PriceRoll() {
         query PriceRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "price-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "price-page" } } }
           ) {
             edges {
               node {
