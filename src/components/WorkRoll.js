@@ -14,19 +14,23 @@ const WorkRollTemplate = (props) => {
       <div id="column-1" className="column">
         {posts &&
           posts.map(({ node: post }, index) => {
-            console.log(index % 3)
             return ( index % 3 == 0 ?
-              <figure 
-                className="image"
-                onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
-                onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+              <Link
+                className=""
+                to={post.fields.slug}
               >
-                <img
-                  id={ post.id }
-                  src={ post.frontmatter? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
-                  alt={ post.frontmatter.featuredimage.alt }
-                ></img>
-              </figure>
+                <figure 
+                  className="image"
+                  onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                  onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                >
+                  <img
+                    id={ post.id }
+                    src={ post.frontmatter? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
+                    alt={ post.frontmatter.featuredimage.alt }
+                  ></img>
+                </figure>
+              </Link>
             : ""
             )
           })
@@ -36,17 +40,25 @@ const WorkRollTemplate = (props) => {
         {posts &&
           posts.map(({ node: post }, index) => {
             return ( index % 3 == 1 ?
-              <figure 
-                className="image"
-                onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
-                onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+              <Link
+                className=""
+                to={post.fields.slug}
+                style={{
+                  height: "100vh !important"
+                }}
               >
-                <img
-                  id={ post.id }
-                  src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
-                  alt={ post.frontmatter.featuredimage.alt }
-                ></img>
-              </figure>
+                <figure 
+                  className="image"
+                  onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                  onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                >
+                  <img
+                    id={ post.id }
+                    src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
+                    alt={ post.frontmatter.featuredimage.alt }
+                  ></img>
+                </figure>
+              </Link>
             : ""
             )
           })
@@ -56,17 +68,25 @@ const WorkRollTemplate = (props) => {
         {posts &&
           posts.map(({ node: post }, index) => {
             return ( index % 3 == 2 ?
-              <figure 
-                className="image"
-                onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
-                onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+              <Link
+                className=""
+                to={post.fields.slug}
+                style={{
+                  height: "30vh !important"
+                }}
               >
-                <img
-                  id={ post.id }
-                  src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
-                  alt={ post.frontmatter.featuredimage.alt }
-                ></img>
-              </figure>
+                <figure 
+                  className="image"
+                  onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                  onMouseOut={ () => $("#" + post.id).attr("src", post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
+                >
+                  <img
+                    id={ post.id }
+                    src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
+                    alt={ post.frontmatter.featuredimage.alt }
+                  ></img>
+                </figure>
+              </Link>
             : ""
             )
           })
@@ -135,6 +155,9 @@ export default function WorkRoll() {
             edges {
               node {
                 id
+                fields {
+                  slug
+                }
                 frontmatter {
                   featuredimage {
                     childImageSharp {
@@ -155,6 +178,16 @@ export default function WorkRoll() {
                     }
                   }
                   alt
+                  intro {
+                    images {
+                      image {
+                        childImageSharp {
+                          gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                        }
+                      }
+                      alttext
+                    }
+                  }
                 }
               }
             }
