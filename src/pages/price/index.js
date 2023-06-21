@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import WorkRoll from "../../components/WorkRoll";
+import PriceRoll from "../../components/PriceRoll";
 
 import $ from "jquery";
 
@@ -52,7 +52,7 @@ export default class PriceIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <WorkRoll />
+              <PriceRoll />
             </div>
           </div>
         </section>
