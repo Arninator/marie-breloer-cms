@@ -142,9 +142,10 @@ const Navbar = () => {
             }}
           >
             <i className="fa-solid fa-brush has-text-black"></i>
-        </div>
+          </div>
         </Link>
-        <a 
+        <Link
+          to="/price"
           className="menu-list-item navbar-item navbar-object is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
           onMouseOver={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).addClass("has-background-white") }}
           onMouseOut={ (e) => {setPriceIsActive(!isPriceActive); $(e.currentTarget).removeClass("has-background-white") }}
@@ -173,7 +174,7 @@ const Navbar = () => {
           >
             <i className="fa-solid fa-coins has-text-black"></i>
           </div>
-        </a>
+        </Link>
         <a 
           className="menu-list-item navbar-item navbar-object is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
           onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).addClass("has-background-white") }}
