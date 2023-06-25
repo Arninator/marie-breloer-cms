@@ -37,6 +37,7 @@ const Navbar = () => {
             style={{ 
               fontWeight: "100",
               fontSize: "5rem",
+              border: "1px solid black"
             }}
           >
             marie&nbsp;breloer
