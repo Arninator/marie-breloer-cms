@@ -27,8 +27,13 @@ export default class PriceIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="placeholder"></div>
-        <div
+        {/* <div className="placeholder"></div> */}
+        <div className="columns">
+          <div className="column is-4" style={{ backgroundImage: `url('../img/20230506_Marie-Breloer_PolasBerlin_IRP4086.jpg')`, height: "75vh", backgroundSize: "cover"}} ></div>
+          <div className="column is-4" style={{ backgroundImage: `url('../img/20230506_Marie-Breloer_PolasBerlin_IRP4098.jpg')`, height: "75vh", backgroundSize: "cover"}} ></div>
+          <div className="column is-4" style={{ backgroundImage: `url('../img/20230506_Marie-Breloer_PolasBerlin_IRP4105.jpg')`, height: "75vh", backgroundSize: "cover"}} ></div>
+        </div>
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('../img/Theater11 190.png')`,
@@ -47,8 +52,8 @@ export default class PriceIndexPage extends React.Component {
             }}
           >
             Latest Stories
-          </h1> */}
-        </div>
+          </h1>
+        </div> */}
         <section className="section">
           <div className="container">
             <div className="content">
