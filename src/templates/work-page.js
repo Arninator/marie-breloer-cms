@@ -27,26 +27,25 @@ export const WorkPageTemplate = ({
                 {title}
               </h2>
               <FullWidthImage img={ getImage(featuredimage) } height={ "75vh" } imgPosition="center"/>
-              <GatsbyImage image={ getImage(intro.images[0].image) } objectFit={"fill"} alt={""} objectPosition={"5% 5%"} style={{ height: "100vh", aspectRatio: "0.5"}}/>
               {/* <GatsbyImage image={ getImage(featuredimage) } /> */}
               <PageContent className="content" content={content} />
               <div className="columns is-multiline" >
                 {intro.images? intro.images.map((object) => (
-                  // <div className="column is-4 border" style={{height: "100vh"}}>
-                  //  {/* <FullWidthImage img={ getImage(object.image) }  /> */}
+                  <div className="column is-4">
+                    {/* <FullWidthImage img={ getImage(object.image) }  /> */}
                     <GatsbyImage image={ getImage(object.image) } alt={ object.alttext }/>
-                  //  {/* <PreviewCompatibleImage imageInfo={ object.image } className="column is-4"/> */}
-                    // <figure>
-                    //   { console.log(object.image.childImageSharp.gatsbyImageData) }
-                    //   <img
-                    //     src={ object.image.childImageSharp.gatsbyImageData.images.fallback.src }
-                    //     alt={ object.image.alttext }
-                    //     style={{
-                    //       width: object.image.childImageSharp.gatsbyImageData.images.fallback.srcSet
-                    //     }}
-                    //   ></img>
-                    // </figure>
-                  // </div>
+                  {/*  <PreviewCompatibleImage imageInfo={ object.image } className="column is-4"/> */}
+                    {/* <figure>
+                      { console.log(object.image.childImageSharp.gatsbyImageData) }
+                      <img
+                        src={ object.image.childImageSharp.gatsbyImageData.images.fallback.src }
+                        alt={ object.image.alttext }
+                        style={{
+                          width: object.image.childImageSharp.gatsbyImageData.images.fallback.srcSet
+                        }}
+                      ></img>
+                    </figure> */}
+                  </div>
                 )): ""}
               </div>
             </div>
