@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, getImageData } from "gatsby-plugin-image"
 import FullWidthImage from "../components/FullWidthImage";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 // eslint-disable-next-line
 export const WorkPageTemplate = ({ 
@@ -26,13 +26,27 @@ export const WorkPageTemplate = ({
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <GatsbyImage image={ getImage(featuredimage) } />
+              <FullWidthImage img={ getImage(featuredimage) } height={ "75vh" } imgPosition="center"/>
+              <GatsbyImage image={ getImage(intro.images[0].image) } objectFit={"fill"} alt={""} objectPosition={"5% 5%"} style={{ height: "100vh", aspectRatio: "0.5"}}/>
+              {/* <GatsbyImage image={ getImage(featuredimage) } /> */}
               <PageContent className="content" content={content} />
               <div className="columns is-multiline" >
                 {intro.images? intro.images.map((object) => (
-
-                  <GatsbyImage image={ getImage(object.image) } className="column is-4" />
-
+                  // <div className="column is-4 border" style={{height: "100vh"}}>
+                  //  {/* <FullWidthImage img={ getImage(object.image) }  /> */}
+                    <GatsbyImage image={ getImage(object.image) } alt={ object.alttext }/>
+                  //  {/* <PreviewCompatibleImage imageInfo={ object.image } className="column is-4"/> */}
+                    // <figure>
+                    //   { console.log(object.image.childImageSharp.gatsbyImageData) }
+                    //   <img
+                    //     src={ object.image.childImageSharp.gatsbyImageData.images.fallback.src }
+                    //     alt={ object.image.alttext }
+                    //     style={{
+                    //       width: object.image.childImageSharp.gatsbyImageData.images.fallback.srcSet
+                    //     }}
+                    //   ></img>
+                    // </figure>
+                  // </div>
                 )): ""}
               </div>
             </div>
@@ -104,7 +118,11 @@ export const workPageQuery = graphql`
           images {
             image {
               childImageSharp {
-                gatsbyImageData(quality: 100, layout: CONSTRAINED)
+                gatsbyImageData(
+                  width: 1200
+                  quality: 100
+                  layout: CONSTRAINED
+                )
               }
             }
             alttext
