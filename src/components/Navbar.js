@@ -14,9 +14,8 @@ const Navbar = () => {
   const [isContactActive, setContactIsActive] = useState(false);
 
   function onClick() {
-
     setIsActive(!isActive);
-    isActive ? $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center") : $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center");
+    !isActive ? $(".menu-list-item").show().addClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center") : $(".menu-list-item").hide().removeClass("is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center");
   }
 
   return (
