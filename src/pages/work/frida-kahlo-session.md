@@ -6,13 +6,13 @@ hoveredimage: /img/romy-frida-452-hover.png
 alt: Frida Kahlo Style
 intro:
   images:
-    - image: /img/romy-frida-419.jpg
+    - image: /img/Romy- FRIDA! 419.png
       alttext: frida frontal
-    - image: /img/romy-frida-421.jpg
+    - image: /img/Romy- FRIDA! 421.png
       alttext: frida guckt zur seite
-    - image: /img/romy-frida-428.jpg
+    - image: /img/Romy- FRIDA! 428.png
       alttext: frida guckt schelmisch
-    - image: /img/romy-frida-447.jpg
+    - image: /img/Romy- FRIDA! 447.png
       alttext: frida schaut gedankenverloren
 ---
 Dies ist von der session deis das vom so und soten
