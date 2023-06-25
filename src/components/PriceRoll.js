@@ -20,9 +20,9 @@ const PriceRollTemplate = (props) => {
               }`}
             >
               <header>
-                {post?.frontmatter?.featuredimage && (
+                {/* {post?.frontmatter?.featuredimage && (
                   <GatsbyImage image={ getImage(post.frontmatter.featuredimage) } alt={""} />
-                )}
+                )} */}
                 <h1>
                   {post.frontmatter.title}
                 </h1>
