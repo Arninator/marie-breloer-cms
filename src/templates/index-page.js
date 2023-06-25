@@ -47,8 +47,11 @@ export const IndexPageTemplate = ({
         img={ heroImage } 
         // title={ title } 
         // subheading={ subheading } 
-        height={ typeof window === 'undefined' ? "100%" : window.innerHeight }
+        height={ typeof window === 'undefined' ? "33%" : window.innerHeight }
         imgPosition="center"
+        style={{
+          // maxHeight: typeof window === 'undefined' ? "100%" : window.innerHeight
+        }}
       />
       <div
         className="is-flex is-flex-direction-column is-justify-content-space-around"
