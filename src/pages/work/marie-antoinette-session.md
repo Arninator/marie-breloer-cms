@@ -6,11 +6,11 @@ hoveredimage: /img/theater-10-130-hover.png
 alt: überraschter Blick zur Seite
 intro:
   images:
-    - image: /img/theater-10-125.jpg
+    - image: /img/Theater 10 125.png
       alttext: xgdxd gd
-    - image: /img/theater-10-137.jpg
+    - image: /img/Theater 10 137.png
       alttext: hkk.k
-    - image: /img/theater-10-142.jpg
+    - image: /img/Theater 10 142.png
       alttext: "<yvs s "
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
