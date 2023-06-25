@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
@@ -12,50 +13,21 @@ const PriceRollTemplate = (props) => {
     <div className="columns is-multiline">
       {posts &&
         posts.map(({ node: post }) => (
-          <div className="is-parent column is-6" key={post.id}>
+          <div className="is-parent column is-8 is-offset-1" key={post.id}>
             <article
-              className={`price-list-item tile is-child box notification ${
+              className={` ${
                 post.frontmatter.featuredpost ? 'is-featured' : ''
               }`}
             >
               <header>
                 {post?.frontmatter?.featuredimage && (
-                  <div className="featured-thumbnail">
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        width:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.width,
-                        height:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.height,
-                      }}
-                    />
-                  </div>
-                ) }
-                <p className="post-meta">
-                  <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
+                  <GatsbyImage image={ getImage(post.frontmatter.featuredimage) } alt={""} />
+                )}
+                <h1>
+                  {post.frontmatter.title}
+                </h1>
               </header>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link className="button" to={post.fields.slug}>
-                  Keep Reading →
-                </Link>
-              </p>
+              <div dangerouslySetInnerHTML={{__html: post.html}}></div>
             </article>
           </div>
         ))}
@@ -83,7 +55,8 @@ export default function PriceRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
+                html
+                excerpt(pruneLength: 4000)
                 id
                 fields {
                   slug
@@ -100,7 +73,6 @@ export default function PriceRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }
