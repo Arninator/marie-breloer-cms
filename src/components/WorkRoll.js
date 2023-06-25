@@ -19,6 +19,7 @@ const WorkRollTemplate = (props) => {
                 className=""
                 to={post.fields.slug}
               >
+                { console.log(post.frontmatter)}
                 <figure 
                   className="image"
                   onMouseOver={ () => $("#" + post.id).attr("src", post.frontmatter.hoveredimage.childImageSharp.gatsbyImageData.images.fallback.src) }
@@ -43,9 +44,9 @@ const WorkRollTemplate = (props) => {
               <Link
                 className=""
                 to={post.fields.slug}
-                style={{
-                  height: "100vh !important"
-                }}
+                // style={{
+                //   height: "100vh !important"
+                // }}
               >
                 <figure 
                   className="image"
@@ -71,9 +72,9 @@ const WorkRollTemplate = (props) => {
               <Link
                 className=""
                 to={post.fields.slug}
-                style={{
-                  height: "30vh !important"
-                }}
+                // style={{
+                //   height: "30vh !important"
+                // }}
               >
                 <figure 
                   className="image"
