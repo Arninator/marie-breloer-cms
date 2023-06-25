@@ -1,7 +1,7 @@
 ---
 templateKey: work-page
 title: Das ist Kunst
-featuredimage: /img/theater07-621.jpg
+featuredimage: /img/theater07-621.png
 hoveredimage: /img/theater07-621-hover.png
 alt: Seitliche Maske
 intro:
