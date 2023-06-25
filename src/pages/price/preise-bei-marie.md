@@ -5,7 +5,7 @@ date: 2023-06-21T19:40:38.026Z
 description: " "
 featuredimage: /img/theater11-190.jpg
 ---
-###### Je nach Aufwand können die Preise individuell variieren, aber grundsätzlich gilt:
+Je nach Aufwand können die Preise individuell variieren, aber grundsätzlich gilt:
 
 ## Haarschnitte
 
@@ -33,5 +33,4 @@ featuredimage: /img/theater11-190.jpg
 
 * Make up und Frisur 200€- 400€
 
-###### 
 Wie du siehst, kann der Preis stark variieren. Kontaktiere mich - wir können gerne besprechen was dir wichtig ist und ich bei dir berechnen würde!
