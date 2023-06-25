@@ -11,7 +11,6 @@ export const PricePageTemplate = ({
   title, 
   content, 
   contentComponent, 
-  intro,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -25,12 +24,12 @@ export const PricePageTemplate = ({
                 {title}
               </h2>
               <PageContent className="content" content={content} />
-              {intro.images? intro.images.map((image) => (
+              {/* {intro? intro.images.map((image) => (
                 <div>
                 { console.log(content) }
                   <GatsbyImage img={image} />
                 </div>
-              )) : <div className="border">BORDER</div>}
+              )) : <div className="border">BORDER</div>} */}
             </div>
           </div>
         </div>
@@ -94,16 +93,6 @@ export const pricePageQuery = graphql`
           }
         }
         alt
-        intro {
-          images {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            alttext
-          }
-        }
       }
     }
   }
