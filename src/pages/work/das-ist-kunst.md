@@ -6,23 +6,23 @@ hoveredimage: /img/theater07-621-hover.png
 alt: Seitliche Maske
 intro:
   images:
-    - image: /img/theater07-629.jpg
+    - image: /img/Theater07 629.png
       alttext: nach links
-    - image: /img/theater07-641.jpg
+    - image: /img/Theater07 641.png
       alttext: halbprofil rechts
-    - image: /img/theater07-653.jpg
+    - image: /img/Theater07 653.png
       alttext: profil rechts
-    - image: /img/theater07-656.jpg
+    - image: /img/Theater07 656.png
       alttext: traurig
-    - image: /img/theater07-659.jpg
+    - image: /img/Theater07 659.png
       alttext: unten links
-    - image: /img/theater07-661.jpg
+    - image: /img/Theater07 661.png
       alttext: nahaufnahme
-    - image: /img/theater07-662.jpg
+    - image: /img/Theater07 662.png
       alttext: schief
-    - image: /img/theater07-663.jpg
+    - image: /img/Theater07 663.png
       alttext: halb nach oben unten
-    - image: /img/theater07-666.jpg
+    - image: /img/Theater07 666.png
       alttext: blick nach rechts
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
