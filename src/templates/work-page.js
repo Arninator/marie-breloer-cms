@@ -30,7 +30,7 @@ export const WorkPageTemplate = ({
               {/* <GatsbyImage image={ getImage(featuredimage) } /> */}
               <PageContent className="content" content={content} />
               <div className="columns is-multiline" >
-                {intro.images? intro.images.map((object) => (
+                {intro != null && intro.images?  intro.images.map((object) => (
                   <div className="column is-4">
                     {/* <FullWidthImage img={ getImage(object.image) }  /> */}
                     <GatsbyImage image={ getImage(object.image) } alt={ object.alttext }/>
