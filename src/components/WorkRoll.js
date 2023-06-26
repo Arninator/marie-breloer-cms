@@ -27,7 +27,7 @@ const WorkRollTemplate = (props) => {
                 >
                   <img
                     id={ post.id }
-                    src={ post.frontmatter? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
+                    src={ post.frontmatter ? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
                     alt={ post.frontmatter.featuredimage.alt }
                   ></img>
                 </figure>
