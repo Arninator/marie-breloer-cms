@@ -81,7 +81,8 @@ const Navbar = () => {
             ></i>
           </div>
         </button>
-        <a
+        <Link
+          to="/about"
           className="navbar-item navbar-object menu-list-item is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
           onMouseOver={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).addClass("has-background-white") }}
           onMouseOut={ (e) => {setAboutIsActive(!isAboutActive); $(e.currentTarget).removeClass("has-background-white") }}
@@ -112,7 +113,7 @@ const Navbar = () => {
               className="fa-regular fa-circle-user has-text-black"
             ></i>
           </div>
-        </a>
+        </Link>
         <Link
           to="/work"
           className="menu-list-item navbar-item navbar-object is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
