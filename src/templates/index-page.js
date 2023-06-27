@@ -37,10 +37,10 @@ export const IndexPageTemplate = ({
     <div 
       className=""
       style={{
-        position: "relative",
-        top: "-15vh",
-        margin: "0",
-        padding: "0",
+        // position: "relative",
+        // top: "-15vh",
+        // margin: "0",
+        // padding: "0",
       }}
     >
       <FullWidthImage 
@@ -51,6 +51,8 @@ export const IndexPageTemplate = ({
         imgPosition="center"
         style={{
           // maxHeight: typeof window === 'undefined' ? "100%" : window.innerHeight
+          padding: "0",
+          margin: "0"
         }}
       />
       <div
