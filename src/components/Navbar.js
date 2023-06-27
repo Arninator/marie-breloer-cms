@@ -25,7 +25,9 @@ const Navbar = () => {
       aria-label="main-navigation"
       style={{
         backgroundColor: "transparent",
-        maxHeight: "15vh",
+        // position: "absolute",
+        // zIndex: "200",
+        height: "0px",
       }}
     >
       <div className="navbar-brand navbar-object">
