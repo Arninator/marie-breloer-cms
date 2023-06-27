@@ -1,8 +1,8 @@
 ---
 templateKey: work-page
 title: Dekadenz
-featuredimage: /img/PICT0202.png
-hoveredimage: /img/PICT0202-hover.png
+featuredimage: /img/pict0202.png
+hoveredimage: /img/pict0202-hover.png
 alt: Dekadenz
 intro:
   images:
