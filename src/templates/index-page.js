@@ -43,18 +43,29 @@ export const IndexPageTemplate = ({
         // padding: "0",
       }}
     >
-      <FullWidthImage 
+      {/* { console.log(heroImage.images.fallback.src) } */}
+      {/* <FullWidthImage 
         img={ heroImage } 
         // title={ title } 
         // subheading={ subheading } 
-        height={ typeof window === 'undefined' ? "33%" : window.innerHeight }
+        height={ typeof window === 'undefined' ? "33%" : "100vh" }
         imgPosition="center"
         style={{
           // maxHeight: typeof window === 'undefined' ? "100%" : window.innerHeight
           padding: "0",
-          margin: "0"
+          margin: "0",
+          top: "-15vh",
         }}
-      />
+      /> */}
+      <div
+        className="full-width-image-container margin-top-0"
+        style={{
+          backgroundImage: `url(${heroImage.images.fallback.src})`,
+          backgroundPosition: "25% 45%",
+          height: "100vh",
+          top: "-6vh",
+        }}
+      ></div>
       <div
         className="is-flex is-flex-direction-column is-justify-content-space-around"
         style={{
