@@ -10,6 +10,11 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <section className="section section--gradient">
+      <div className="columns">
+        <div className="column is-4" style={{ backgroundImage: `url('../img/Marie_vanGogh_1.png')`, height: "75vh", backgroundSize: "cover"}} ></div>
+        <div className="column is-4" style={{ backgroundImage: `url('../img/vangogh_test_halb.png.png')`, height: "75vh", backgroundSize: "cover"}} ></div>
+        <div className="column is-4" style={{ backgroundImage: `url('../img/Marie_vanGogh_7.png')`, height: "75vh", backgroundSize: "cover"}} ></div>
+      </div>
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
