@@ -10,8 +10,8 @@ const WorkRollTemplate = (props) => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div className="columns is-multiline is-0">
-      <div id="column-1" className="column">
+    <div className="columns is-1" >
+      <div id="column-1" className="column is-4">
         {posts &&
           posts.map(({ node: post }, index) => {
             return ( index % 3 == 0 ?
@@ -27,8 +27,8 @@ const WorkRollTemplate = (props) => {
                 >
                   <img
                     id={ post.id }
-                    src={ post.frontmatter ? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
-                    alt={ post.frontmatter.featuredimage.alt }
+                    src={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
+                    alt={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.alt : "" }
                   ></img>
                 </figure>
               </Link>
@@ -37,16 +37,19 @@ const WorkRollTemplate = (props) => {
           })
         }
       </div>
-      <div id="column-2" className="column">
+      <div 
+        id="column-2" 
+        className="column is-4"
+        style={{
+          margin: "0 !important"
+        }}>
         {posts &&
           posts.map(({ node: post }, index) => {
             return ( index % 3 == 1 ?
               <Link
                 className=""
                 to={post.fields.slug}
-                // style={{
-                //   height: "100vh !important"
-                // }}
+                
               >
                 <figure 
                   className="image"
@@ -55,8 +58,8 @@ const WorkRollTemplate = (props) => {
                 >
                   <img
                     id={ post.id }
-                    src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
-                    alt={ post.frontmatter.featuredimage.alt }
+                    src={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : ""}
+                    alt={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.alt : "" }
                   ></img>
                 </figure>
               </Link>
@@ -65,7 +68,7 @@ const WorkRollTemplate = (props) => {
           })
         }
       </div>
-      <div id="column-3" className="column">
+      <div id="column-3" className="column is-4">
         {posts &&
           posts.map(({ node: post }, index) => {
             return ( index % 3 == 2 ?
@@ -83,8 +86,8 @@ const WorkRollTemplate = (props) => {
                 >
                   <img
                     id={ post.id }
-                    src={ post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src }
-                    alt={ post.frontmatter.featuredimage.alt }
+                    src={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images.fallback.src : "" }
+                    alt={ post.frontmatter.featuredimage ? post.frontmatter.featuredimage.alt : "" }
                   ></img>
                 </figure>
               </Link>
