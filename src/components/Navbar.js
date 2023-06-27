@@ -178,7 +178,8 @@ const Navbar = () => {
             <i className="fa-solid fa-coins has-text-black"></i>
           </div>
         </Link>
-        <a 
+        <Link
+          to="/contact"
           className="menu-list-item navbar-item navbar-object is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center" 
           onMouseOver={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).addClass("has-background-white") }}
           onMouseOut={ (e) => {setContactIsActive(!isContactActive); $(e.currentTarget).removeClass("has-background-white") }}
@@ -207,7 +208,7 @@ const Navbar = () => {
           >
             <i className="fa-solid fa-phone has-text-black"></i>
           </div>
-        </a>
+        </Link>
       </div>
     </nav>
   );
